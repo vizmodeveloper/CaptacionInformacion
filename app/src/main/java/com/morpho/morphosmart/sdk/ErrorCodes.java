@@ -137,7 +137,7 @@ public class ErrorCodes {
 	/** Security error. */
 	public static final int MORPHOERR_SECU = -39;
 	
-	/** The MSO has not the certificate necessary to verify the signature. */
+	/** The MSO has not the certificate necessary to verify the activity_signature. */
 	public static final int MORPHOERR_CERTIF_UNKNOW = -40;
 	
 	/** The class has been destroyed. */
@@ -332,7 +332,7 @@ public class ErrorCodes {
 		case MORPHOERR_SECU:
 			return "Security error.";
 		case MORPHOERR_CERTIF_UNKNOW:
-			return "The MSO has not the certificate necessary to verify the signature.";
+			return "The MSO has not the certificate necessary to verify the activity_signature.";
 		case MORPHOERR_INVALID_CLASS:
 			return "The class has been destroyed.";
 		case MORPHOERR_USB_DEVICE_NAME_UNKNOWN:

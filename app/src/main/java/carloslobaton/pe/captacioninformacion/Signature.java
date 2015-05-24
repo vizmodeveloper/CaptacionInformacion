@@ -51,7 +51,7 @@ public class Signature extends View {
         }
         Canvas canvas = new Canvas(mBitmap);
         try {
-            File file = new File(new FileHelper(mContext).fullCacheImage("signature.png"));
+            File file = new File(new FileHelper(mContext).fullCacheImage("activity_signature.png"));
             FileOutputStream mFileOutStream = new FileOutputStream(file);
 
             v.draw(canvas);

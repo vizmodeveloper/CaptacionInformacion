@@ -17,21 +17,30 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="CANCELAR" />
+            android:background="@drawable/shape_button_primary"
+            android:text="CANCELAR"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/erase"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="BORRAR" />
+            android:background="@drawable/shape_button_primary"
+            android:text="BORRAR"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/save"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="GUARDAR" />
+            android:background="@drawable/shape_button_primary"
+            android:text="GUARDAR"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <FrameLayout

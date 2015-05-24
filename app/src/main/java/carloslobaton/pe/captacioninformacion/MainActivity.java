@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
@@ -35,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(new Intent(this, SignatureActivity.class), REQUEST_SIGNATURE_CAPTURE);
     }
     @OnClick(R.id.face) void takeFace(){
-        takePicture("dni2.png",REQUEST_FACE_CAPTURE);
+        takePicture("face.png",REQUEST_FACE_CAPTURE);
     }
     @OnClick(R.id.dni1) void takeDni1(){
-        takePicture("dni2.png",REQUEST_DNI1_CAPTURE);
+        takePicture("dni1.png",REQUEST_DNI1_CAPTURE);
     }
     @OnClick(R.id.dni2) void takeDni2(){
         takePicture("dni2.png",REQUEST_DNI2_CAPTURE);
@@ -50,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
         fHelper = new FileHelper(this);
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary)));
+        getSupportActionBar().setIcon(R.drawable.image_nofingerprint);
     }
 
     private void takePicture(final String fileName, final int picId){
@@ -77,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 ((ImageView)ButterKnife.findById(this,R.id.dni2)).setImageBitmap(bmpDni2);
             }
         } else if (requestCode==REQUEST_SIGNATURE_CAPTURE && resultCode == Activity.RESULT_OK){
-            File file = new File(new FileHelper(this).fullCacheImage("signature.png"));
+            File file = new File(new FileHelper(this).fullCacheImage("activity_signature.png"));
             if (file.exists()){
                 ImageView signature = ButterKnife.findById(this,R.id.signature);
                 signature.setBackgroundColor(getResources().getColor(R.color.white));

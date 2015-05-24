@@ -1,79 +1,292 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:weightSum="5"
-    android:background="@color/black"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:weightSum="2"
-        android:orientation="vertical">
+        android:layout_weight="8"
+        android:background="@color/clear_gray"
+        android:orientation="vertical"
+        android:weightSum="11">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_weight="5"
             android:orientation="horizontal"
-            android:layout_weight="1">
-            <ImageView
-                android:id="@+id/face"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:src="@drawable/image_noface"
-                android:layout_height="match_parent" />
-            <ImageView
-                android:src="@drawable/image_nofingerprint"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
+            android:weightSum="2">
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size_tiny"
+                android:layout_weight="1"
+                android:background="@color/primary">
+
+                <ImageView
+                    android:id="@+id/face"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:src="@drawable/image_noface" />
+            </FrameLayout>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size_tiny"
+                android:layout_weight="1"
+                android:background="@color/primary">
+
+                <ImageView
+                    android:id="@+id/nofingerprint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:padding="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/image_nofingerprint" />
+            </RelativeLayout>
         </LinearLayout>
+
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="horizontal"
             android:layout_height="0dp"
-            android:layout_weight="1">
-            <ImageView
-                android:id="@+id/dni1"
-                android:src="@drawable/image_nodni1"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
-            <ImageView
-                android:id="@+id/dni2"
-                android:src="@drawable/image_nodni2"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size_tiny"
+                android:layout_weight="1"
+                android:background="@color/primary">
+
+                <ImageView
+                    android:id="@+id/dni1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:padding="@dimen/size_mini"
+                    android:src="@drawable/image_nodni1" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size_tiny"
+                android:layout_weight="1"
+                android:background="@color/primary">
+
+                <ImageView
+                    android:id="@+id/dni2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:padding="@dimen/size_mini"
+                    android:src="@drawable/image_nodni2" />
+            </FrameLayout>
         </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/size_tiny"
+            android:layout_weight="3"
+            android:background="@color/primary">
+
+            <ImageView
+                android:id="@+id/signature"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:padding="2dp"
+                android:src="@drawable/image_nosignature" />
+        </FrameLayout>
+
 
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:weightSum="5"
+        android:layout_marginLeft="@dimen/size_tiny"
+        android:layout_marginRight="@dimen/size_tiny"
+        android:layout_marginTop="@dimen/size_large"
+        android:layout_weight="13"
         android:orientation="vertical">
-        <ImageView
-            android:id="@+id/signature"
 
-            android:src="@drawable/image_nosignature"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/size_mini"
+            android:layout_marginTop="@dimen/size_tiny"
+            android:text="CAPTACION DE DATOS"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/size_tiny"
+            android:background="@color/black" />
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_weight="2"
-            android:layout_height="0dp" />
-        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_mini"
+            android:layout_marginTop="@dimen/size_large"
+            android:gravity="left"
+            android:text="DATOS DEL CLIENTE"
+            android:textColor="@color/primary"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3">
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/size_tiny"
+            android:background="@color/primary" />
 
-        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/label_names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/names"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@id/names"
+                android:gravity="center_vertical"
+                android:text="NOMBRES:"
+                android:textColor="@color/black" />
 
+            <EditText
+                android:id="@id/names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/label_names"
+                android:enabled="false"
+                android:nextFocusDown="@+id/flastname"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_document"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/document"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@id/document"
+                android:gravity="center_vertical"
+                android:text="DNI:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@id/document"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/label_document"
+                android:enabled="false"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_flastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/flastname"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@id/flastname"
+                android:gravity="center_vertical"
+                android:text="A. PATERNO:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@id/flastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/label_flastname"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:nextFocusDown="@+id/mlastname"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_mlastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/mlastname"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@id/mlastname"
+                android:gravity="center_vertical"
+                android:text="A. MATERNO:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@id/mlastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/label_mlastname"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:nextFocusDown="@+id/email"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/size_large"
+            android:background="@drawable/shape_button_primary"
+            android:drawablePadding="@dimen/size_tiny"
+            android:paddingLeft="@dimen/size_large"
+            android:paddingRight="@dimen/size_large"
+            android:text="REGISTRAR"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
     </LinearLayout>
-
 </LinearLayout>

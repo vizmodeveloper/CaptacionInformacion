@@ -581,7 +581,7 @@ public class MorphoDevice implements Serializable, Cloneable
 		- Mask = 0x00 No security options. 
 		- b1 = 1 The MorphoSmart™; uses the "tunneling" protocol. 
 		- b2 = 1 The MorphoSmart™; uses the "offered security" protocol. 
-		- b3 = 1 The MorphoSmart™; uses only templates with a digital signature (within an X9.84 envelop). 
+		- b3 = 1 The MorphoSmart™; uses only templates with a digital activity_signature (within an X9.84 envelop).
 		- b4 = 1 The MorphoSmart™; only accept signed firmware packages during retrofit. 
 		- b5 = 1 The MorphoSmart™; can not return the matching score. 
 		- b6-b7-b8 RFU 
@@ -843,7 +843,7 @@ public class MorphoDevice implements Serializable, Cloneable
 	/** This function loads a new Key in the MorphoSmart™;, this key is used to ciffer the Template passed to the Smart Card in a Match on Card process It uses the secured key load solution 
 	 * @param key_enc_Ciffered_by_Certificate Defines the Kenc Ciffered by the MSO Certificate.  
 	 * @param key_enc_Ciffered_by_Certificate_Signature Defines the Signature of the previous parameter, the Kenc Ciffered by the MSO Certificate.  
-	 * @param hostCertificate The host certificate encoded in DER format used for the signature.  
+	 * @param hostCertificate The host certificate encoded in DER format used for the activity_signature.
 	 * @return values:
 		- MORPHO_OK The execution of the function was successful.  
 		- MORPHOERR_INVALID_CLASS The class has been destroyed  

@@ -81,7 +81,7 @@ public class FileHelper {
             case TYPE_FACE:
                 return "face.bin";
             case TYPE_SIGNATURE:
-                return "signature.bin";
+                return "activity_signature.bin";
             case TYPE_PATTERN:
                 return "patterns.bin";
         }
