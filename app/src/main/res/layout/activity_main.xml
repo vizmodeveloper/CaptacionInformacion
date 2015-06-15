@@ -45,7 +45,7 @@
                 android:background="@color/primary">
 
                 <ImageView
-                    android:id="@+id/nofingerprint"
+                    android:id="@+id/fingerprint"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clickable="true"
@@ -184,8 +184,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_toRightOf="@id/label_names"
-                android:enabled="false"
-                android:nextFocusDown="@+id/flastname"
+                android:nextFocusDown="@+id/document"
                 android:singleLine="true"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -212,8 +211,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_toRightOf="@id/label_document"
-                android:enabled="false"
+                android:nextFocusDown="@+id/flastname"
                 android:singleLine="true"
+                android:maxLength="8"
+                android:inputType="number"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
         </RelativeLayout>
@@ -238,7 +239,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/label_flastname"
-                android:enabled="false"
                 android:inputType="textPersonName"
                 android:nextFocusDown="@+id/mlastname"
                 android:singleLine="true"
@@ -267,7 +267,6 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_toRightOf="@id/label_mlastname"
-                android:enabled="false"
                 android:inputType="textPersonName"
                 android:nextFocusDown="@+id/email"
                 android:singleLine="true"

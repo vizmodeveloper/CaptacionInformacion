@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Captacion</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="dialog_default_title">Captación</string>
+    <string name="dialog_default_positive">Aceptar</string>
+    <string name="dialog_default_negative">Cancelar</string>
 
     <string name="OP_SUCCESS">Verification completed successfully</string>
     <string name="OP_FAILED">Verification failed</string>
@@ -72,5 +73,14 @@
     <string name="MORPHOERR_FVP_FINGER_MISPLACED_OR_WITHDRAWN">Misplaced or withdrawn finger has been detected during acquisition (MorphoSmart FINGER VP only).</string>
     <string name="MORPHOERR_LICENSE_MISSING">A required license is missing.</string>
     <string name="MORPHOERR_CANT_GRAN_PERMISSION_USB">Could not grant permissions to USB</string>
+    <string name="fingerprint_confirmation">Por favor, ingrese nuevamente la huella del dedo que utilizó</string>
+    <string name="fingerprint_successful">Su huella ha sido registrada correctamente</string>
+    <string name="fingerprint_validationerror">Hubo un problema en la validación de la huella, por favor intente nuevamente</string>
+    <string name="filename_signature">activity_signature.png</string>
+    <string name="filename_dni2">dni2.png</string>
+    <string name="filename_dni1">dni1.png</string>
+    <string name="filename_face">face.png</string>
+    <string name="register_error_images">Alguno de los inputs no ha sido llenado</string>
+    <string name="register_error_text">Alguno de los campos no es válido</string>
 
 </resources>
