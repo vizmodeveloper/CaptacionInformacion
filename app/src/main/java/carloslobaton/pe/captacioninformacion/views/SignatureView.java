@@ -1,4 +1,4 @@
-package carloslobaton.pe.captacioninformacion;
+package carloslobaton.pe.captacioninformacion.views;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -16,10 +16,12 @@ import android.view.View;
 import java.io.File;
 import java.io.FileOutputStream;
 
+import carloslobaton.pe.captacioninformacion.utils;
+
 /**
  * Created by DanielRolando on 20/05/2015.
  */
-public class Signature extends View {
+public class SignatureView extends View {
     private static final float STROKE_WIDTH = 5f;
     private static final float HALF_STROKE_WIDTH = STROKE_WIDTH / 2;
     private Paint paint = new Paint();
@@ -34,7 +36,7 @@ public class Signature extends View {
     private boolean isCapturing = false;
 
 
-    public Signature(Context context, AttributeSet attrs) {
+    public SignatureView(Context context, AttributeSet attrs) {
         super(context, attrs);
         paint.setAntiAlias(true);
         paint.setColor(Color.BLACK);
@@ -51,7 +53,7 @@ public class Signature extends View {
         }
         Canvas canvas = new Canvas(mBitmap);
         try {
-            File file = new File(new FileHelper(mContext).fullCacheImage("activity_signature.png"));
+            File file = new File(new utils.FileHelper(mContext).fullCacheImage("activity_signature.png"));
             FileOutputStream mFileOutStream = new FileOutputStream(file);
 
             v.draw(canvas);

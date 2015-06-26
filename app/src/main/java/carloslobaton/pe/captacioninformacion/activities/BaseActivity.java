@@ -1,10 +1,12 @@
-package carloslobaton.pe.captacioninformacion;
+package carloslobaton.pe.captacioninformacion.activities;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.widget.TextView;
+
+import carloslobaton.pe.captacioninformacion.R;
 
 /**
  * Created by DanielRolando on 14/06/2015.

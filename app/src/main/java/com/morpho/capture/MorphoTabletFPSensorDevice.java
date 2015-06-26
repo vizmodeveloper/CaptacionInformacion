@@ -451,7 +451,7 @@ public class MorphoTabletFPSensorDevice implements Observer {
 
 	}
 
-	public int verifyMatch(byte[] arg0,byte[] arg1) {
+	public int verifyMatch(byte[] arg0,byte[] arg1, TemplateType templateType) {
 		// in Fact nothing, we'll use the Matcher module for that
 		TemplateList listSearch, listRef;
 		Template tmpl1, tmpl2;
@@ -465,12 +465,12 @@ public class MorphoTabletFPSensorDevice implements Observer {
 
 		tmpl1.setData(arg0);
 		tmpl1.setDataIndex(0);
-		tmpl1.setTemplateType(TemplateType.MORPHO_PK_COMP);
+		tmpl1.setTemplateType(templateType);
 
 		Log.v("", "temp  	" + templateBuffer + "  arg " + arg0);
 		tmpl2.setData(arg1);
 		tmpl2.setDataIndex(0);
-		tmpl2.setTemplateType(TemplateType.MORPHO_PK_COMP);
+		tmpl2.setTemplateType(templateType);
 
 		listSearch.putTemplate(tmpl1);
 		listRef.putTemplate(tmpl2);

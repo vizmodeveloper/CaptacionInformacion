@@ -5,6 +5,11 @@
     <string name="dialog_default_positive">Aceptar</string>
     <string name="dialog_default_negative">Cancelar</string>
 
+    <string name="step1">Paso 1: Leer el DNI con el sensor</string>
+    <string name="step2">Paso 2: Obteniendo información del DNI</string>
+    <string name="step3">Paso 3: Presionar en la imagen de la huella dactilar</string>
+    <string name="step4">Paso 4: Ubicar el índice derecho en el sensor de huella dactilar</string>
+
     <string name="OP_SUCCESS">Verification completed successfully</string>
     <string name="OP_FAILED">Verification failed</string>
     <string name="MORPHO_OK">No error.</string>

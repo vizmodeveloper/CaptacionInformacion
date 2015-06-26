@@ -1,23 +1,22 @@
-package carloslobaton.pe.captacioninformacion;
+package carloslobaton.pe.captacioninformacion.asynctasks;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
-import android.util.Log;
 
-import java.util.Date;
+import carloslobaton.pe.captacioninformacion.activities.BaseActivity;
+import carloslobaton.pe.captacioninformacion.utils;
 
 /**
  * Created by DanielRolando on 14/06/2015.
  */
 public class SaveInfoAsynctask extends AsyncTask {
     BaseActivity activity;
-    FileHelper fHelper;
+    utils.FileHelper fHelper;
     String names, document, flastname, mlastname;
     byte[] fingerprintData;
     Bitmap face,dni1,dni2,signature,fingerprintImage;
 
-    public SaveInfoAsynctask(BaseActivity activity, FileHelper fHelper, String names, String document, String flastname, String mlastname,
+    public SaveInfoAsynctask(BaseActivity activity, utils.FileHelper fHelper, String names, String document, String flastname, String mlastname,
                              byte[] fingerprintData, Bitmap face, Bitmap dni1, Bitmap dni2, Bitmap signature, Bitmap fingerprintImage) {
         this.activity = activity;
         this.fHelper = fHelper;
